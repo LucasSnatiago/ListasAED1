@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 int main(){
-    int num1, num2, result = 0;
-
+    int num1, num2;
+    long long int result = 0;
     printf("Calculadora da serie de Fetuccine\n");
     
     printf("Escreva o primeiro valor: ");
@@ -18,17 +18,17 @@ int main(){
     for(int i = 0; i < 100; i++){
         
         if(i % 2 == 0){
-            result = num1 + num2;
+            result = num1 - num2;
         }
         else{
-            result = num1 - num2;
+            result = num1 + num2;
         }
 
         num2 = num1;
         num1 = result;
         
     
-        printf("%d,", result);
+        printf("%lld, ", result);
     }
     printf("\nObrigado por usar meu programa.\n");
 }

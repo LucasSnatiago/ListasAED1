@@ -3,7 +3,7 @@
 
 int main(){
     int num1, num2;
-    long long int result = 0;
+    long long int result;
     printf("Calculadora da serie de Fetuccine\n");
     
     printf("Escreva o primeiro valor: ");
@@ -15,20 +15,23 @@ int main(){
     scanf("\n%d", &num2);
 
     printf("100 primeiros termos da serie:\n");
-    for(int i = 0; i < 100; i++){
+    printf("%d\n", num1);
+    printf("%d\n", num2);
+
+    for(int i = 3; i <= 100; i++){
         
         if(i % 2 == 0){
-            result = num1 - num2;
+            result = num2 - num1;
         }
         else{
-            result = num1 + num2;
+            result = num2 + num1;
         }
 
-        num2 = num1;
-        num1 = result;
+        num1 = num2;
+        num2 = result;
         
     
-        printf("%lld, ", result);
+        printf("%lli\n", result);
     }
     printf("\nObrigado por usar meu programa.\n");
 }

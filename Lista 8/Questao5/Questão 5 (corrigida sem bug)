@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main(){
+    
+    int x,
+        y, 
+        posi;
+        
+    printf("|===========|\n");
+    printf("| Fetuccine |\n");
+    printf("|===========|\n");
+    
+    printf("Digite um Numero: \n[0]sair\n");
+    fflush(stdin);
+    scanf("%d", &x);
+    
+    printf("Digite outro Numero: \n[0]sair\n");
+    fflush(stdin);
+    scanf("%d", &y);
+    
+    while(x!=0&&y!=0)
+    {
+        printf("---");
+        printf("\n[%d]\n[%d]\n",x,y);
+        for(posi=3;posi<=100;posi++){
+            int temp = y;
+            if(posi%2 == 0)
+                {y=y-x;}
+            else
+                {y=y+x;}
+            x=temp;
+            printf("[%d]\n",y);
+        }
+        printf("----------------------------\n");
+        printf("Digite um Numero: \nDigite [0] em tudo para sair\n");
+        fflush(stdin);
+        scanf("%d", &x);
+        
+        printf("Digite outro Numero: \n");
+        fflush(stdin);
+        scanf("%d", &y);
+    }
+    printf("===============================");
+    return(0);
+}

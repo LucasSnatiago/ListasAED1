@@ -15,7 +15,7 @@ int funExe3();
 int funExe4();
 //
 
-//exercico 1
+//exercicio 1
 void funExe1Begin();
 float funLerVal(); //para todos os exercicios
 float funCalcMaior(float va, float vb);

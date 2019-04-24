@@ -1,3 +1,15 @@
+/*
+Lucas Santiago - 24/04/19
+Biblioteca criada para facilitar a vida dos programadores
+Como importar minha biblioteca:
+basta acrescentar: 
+#include "mochilaDoHeroi.h"   
+(lembre-se de colocar aspas nao é para usar o simbolo de maior e menor que <> )
+no comeco do seu codigo
+A biblioteca precisa estar na mesma pasta que o seu codigo.c para ser compilado!
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

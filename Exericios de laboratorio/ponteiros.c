@@ -9,6 +9,8 @@ void main(){
     int num1, num2;
     lerInt(&num1); 
     lerInt(&num2); 
+    printf("\nLocalizacao da memoria num1: %p", &num1); //localizacao das variaveis na memoria para simples conferencia
+    printf("\nLocalizacao da memoria num2: %p", &num2); //localizacao das variaveis na memoria para simples conferencia
 
     maiorNum(&num1 ,&num2); 
     escreverTela(&num1);
@@ -29,6 +31,6 @@ void maiorNum(int *numero1, int *numero2){
 
 void escreverTela(int *num){
 
-    printf("O maior eh %d", *num);
+    printf("\nO maior eh %d\n", *num);
 
 }

@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void troca(int *x, int *y);
+
+void main(){
+    int a=5,
+         b=2;
+    troca(&a, &b);
+    printf("\n%i, %i", a, b);
+}
+    
+
+void troca(int *x, int *y){
+   int aux;
+   aux= *x;
+   *x = *y;
+   *y = aux;
+}
+
+
+Essa função troca a ordem entre o valor armazenado na variavel a e b da main. Como a função troca não tem acesso as váriaveis da função main, é necessário passar a posição de memória para que os valores sejam alterados na RAM e posteriormente usados no printf.

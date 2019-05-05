@@ -2,7 +2,7 @@
 
 void criarArquivo();
 void escreverArquivo();
-int lerArquivo();
+void lerArquivo();
 
 
 void main(){
@@ -32,7 +32,7 @@ void escreverArquivo(){
 /*
 Lucas Santiago - 02/05/19
 Objetivo: Escrever algo em um arquivo
-Entrada: Localizacao de memoria do arquivo
+Sem entrada
 Sem saida
 */
   int dado1 = 17, dado2 = 50, dado3 = 55, lerDado1, lerDado2, lerDado3;
@@ -55,12 +55,12 @@ Sem saida
 }
 
 
-int lerArquivo(){
+void lerArquivo(){
 /*
 Lucas Santiago - 02/05/19
 Objetivo: ler dados de um arquivo
-Entrada: ponteiro que aponta para o arquivo
-Saida: Numeros escritos no arquivo
+Sem entrada
+Sem saida
 */
   FILE *lerArquivo;
   int dado1, dado2, dado3;

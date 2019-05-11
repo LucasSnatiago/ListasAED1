@@ -241,3 +241,14 @@ Saida: menor numero
 
   return menor;
 }
+
+FILE *criarArquivo(){
+    FILE *arq = fopen("dados.dat", "w");
+    if (arq == NULL){
+      printf("\nO arquivo nao pode ser criado!");
+    }
+    else{
+      printf("\nArquivo criado com sucesso!");
+    }
+return arq;
+}

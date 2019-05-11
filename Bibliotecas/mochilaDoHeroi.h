@@ -243,6 +243,12 @@ Saida: menor numero
 }
 
 FILE *criarArquivo(){
+/*
+Lucas Santiago - 11/05/19
+Objetivo: Criar arquivo no disco
+Sem entrada
+Saida: ponteiro apontando para o arquivo criado
+*/
     FILE *arq = fopen("dados.dat", "w");
     if (arq == NULL){
       printf("\nO arquivo nao pode ser criado!");

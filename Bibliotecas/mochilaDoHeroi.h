@@ -258,3 +258,23 @@ Saida: ponteiro apontando para o arquivo criado
     }
 return arq;
 }
+
+int preencherMatriz(float arranjo[]){
+/*
+Lucas Santiago - 26/05/19
+Objetivo: Preencher uma matriz unidimensional
+Entrada: matriz para ser preenchida
+Saida: Numero de itens escritos na matriz
+*/
+  const int flag = 0;
+  float entrada;
+  int contador = 0;
+  printf("\nEscreva os valores para serem adicionados na matriz (Digite 0 para sair)");
+  entrada = lerFloat();
+  while(entrada != flag){
+    arranjo[contador] = entrada;
+    contador++;
+    entrada = lerFloat();
+  }
+  return contador;
+}

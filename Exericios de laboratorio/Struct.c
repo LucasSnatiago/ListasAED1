@@ -3,25 +3,28 @@
 const int MAX = 30;
 
 typedef struct Agenda{
-    char *nome;
+    char nome[30];
     int dia;
     int mes;
 }Agenda;
 
 int EscolhaUsuario();
-int Cadastrar(Agenda agenda[], int contador);
+void Cadastrar(Agenda agenda[], int contador);
 void Aniversariantes(Agenda agenda[]);
 
 void main(){
     apresentacao();
-    int numCadastrados = 0, escolhaUsuario;
+    int numCadastrados = 0,
+        escolhaUsuario;
     Agenda agenda[MAX];
 
-    do{
-      escolhaUsuario = EscolhaUsuario();
+
+    escolhaUsuario = EscolhaUsuario();
+    while(1){ //repetir a escolha do usuario para sempre, ate ele digitar 0 e sair do programa
       switch(escolhaUsuario){
           case 1:
-              numCadastrados = Cadastrar(agenda, numCadastrados);
+              Cadastrar(agenda, numCadastrados);
+              numCadastrados++;
               break;
           case 2:
               Aniversariantes(agenda);
@@ -30,9 +33,9 @@ void main(){
               despedida();
               exit(0);
       }
-    }while(escolhaUsuario > 0 && escolhaUsuario <= 3); //repetir sempre que o usuario digitar algo
+      escolhaUsuario = EscolhaUsuario();
+    }
 }
-
 
 
 int EscolhaUsuario(){
@@ -42,30 +45,24 @@ int EscolhaUsuario(){
     printf("\nDigite:\n0 - Para sair\n1 - Para cadastrar na agenda\n2 - Para pesquisar aniversariantes do mes");
     do{
         entrada = lerInt();
-    }while(entrada < 0 && entrada > 3);
+    }while(entrada < 0 || entrada > 3);
     return entrada;
 }
 
 
-int Cadastrar(Agenda agenda[], int contador){
+void Cadastrar(Agenda agenda[], int contador){
   //preencher agenda
   printf("\n------Cadastrar novo usuario------\n");
 
   printf("\nEscreva o nome do usuario: ");
   fflush(stdin);
-  char nome[30];
-  scanf("%s", nome);
+  scanf("\n%s", agenda[contador].nome);
 
   printf("\nEscreva o dia do aniversario: ");
-  int dia = lerInt();
+  agenda[contador].dia = lerInt();
 
   printf("\nEscreva o mes: ");
-  int mes = lerInt();
-
-  agenda[contador].nome = nome;
-  agenda[contador].dia = dia;
-  agenda[contador].mes = mes;
-  return contador+1;
+  agenda[contador].mes = lerInt();
 }
 
 
@@ -80,5 +77,5 @@ void Aniversariantes(Agenda agenda[]){
       printf("\n%s", agenda[i].nome);
     }
   }
-  printf("\n\n");
+  printf("\n");
 }

@@ -11,4 +11,4 @@ javac $1.java
 java $1
 
 ##Remover arquivo compilado
-rm $1.class
+rm *.class
